@@ -103,6 +103,26 @@ https://wiki.haskell.org/The_JavaScript_Problem
 - [production examples](http://www.nagare.org/trac/wiki/WhoUsesNagare),
   [Kansha](http://www.kansha.org/), open-source Trello clone.
 
+**Editor's note**: looks like ASP .Net. Doesn't seem totally JavaScript free:
+
+```python
+@presentation.render_for(Board, 'switch')
+def render_Board_item(self, h, comp, *args):
+    reload_search = ajax.Update(component_to_update='show_results',
+                                render=lambda renderer: comp.render(renderer, 'search_results'))
+    h << h.script(u'''$(window).on('reload_search', function() { %s; })''' % reload_search.generate_action(41, h))
+
+    with h.div(id='switch_zone'):
+        if self.model == 'columns':
+            search_cb = ajax.Update(
+                action=self.search,
+                component_to_update='show_results',
+                render=lambda renderer: comp.render(renderer, 'search_results')
+            ).generate_action(1, h).replace('this', 'elt')
+            oninput = 'debounce(this, function(elt) { %s; }, 500)' % search_cb
+            # etc
+```
+
 ## Ruby
 
 ### Inesita
