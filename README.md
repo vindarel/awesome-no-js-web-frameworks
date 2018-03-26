@@ -25,6 +25,7 @@ Inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://wiki.haske
     - [Ocaml](#ocaml)
         - [Eliom](#eliom)
     - [Python](#python)
+        - [Anpylar](#anpylar)
         - [Nagare](#nagare)
     - [Ruby](#ruby)
         - [Inesita](#inesita)
@@ -94,6 +95,19 @@ https://wiki.haskell.org/The_JavaScript_Problem
 **Editor's note**: quite some work to install, compile and deploy.
 
 ## Python
+
+### Anpylar
+
+- https://www.anpylar.com/
+- uses [Brython](https://github.com/brython-dev/brython), an
+  implementation of Python 3 running in the browser.
+
+> [me] Reminds me of Nagare.
+>
+> [Anpylar team] AnPyLar has gone a step beyond by being client-side. One of the advantages is that the application is downloaded once, and can contain multiple pages and hierarchies, which are navigated without sending a single request to the server.
+>
+> The server can with it be a pure API server (and the server of the initial content download), with the advantage of no longer having to implement business logic in the server.
+
 
 ### Nagare
 
