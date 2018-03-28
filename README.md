@@ -92,6 +92,61 @@ https://wiki.haskell.org/The_JavaScript_Problem
 >
 > It can also be used for more traditional Web or mobile apps: server only, single page applications, REST API, etc.
 
+Excerpt from the [tutorial](https://ocsigen.org/tuto/6.1/manual/tutowidgets):
+
+The following code defines a client-server Web application with only one service, registered at URL / (the root of the website).
+
+The code also defines a client-side application (section [%%client ... ] ) that appends a client-side generated widget to the page. Section [%%shared ... ] is compiled on both the server and the client-side programs. Inside such a section, you can write let%server or let%client to override [%%shared ... ] and define a server-only or client-only value (similarly for [%%server ... ] and [%%client ... ] ).
+
+```ocaml
+module Ex_app =
+  Eliom_registration.App (struct
+    let application_name = "ex"
+    let global_data_path = None
+  end)
+
+let _ = Eliom_content.Html.D.(
+  Ex_app.create
+    ~path:(Eliom_service.Path [""])
+    ~meth:(Eliom_service.Get Eliom_parameter.unit)
+    (fun () () ->
+       Lwt.return
+         (Eliom_tools.D.html ~title:"tutowidgets" ~css:[["css"; "ex.css"]]
+            (body [h2 [pcdata "Welcome to Ocsigen!"]])))
+)
+
+[%%client
+let mywidget s1 s2 = Eliom_content.Html.D.(
+  let button  = div ~a:[a_class ["button"]] [pcdata s1] in
+  let content = div ~a:[a_class ["content"]] [pcdata s2] in
+  div ~a:[a_class ["mywidget"]] [button; content]
+)
+
+let _ =
+  let%lwt _ = Lwt_js_events.onload () in
+  Dom.appendChild
+    (Dom_html.document##.body)
+    (Eliom_content.Html.To_dom.of_element (mywidget "Click me" "Hello!"));
+  Lwt.return ()
+]
+```
+
+The `##` is used to call a JS method from OCaml and `##.` to access a
+JS object field.
+
+`Lwt` is the concurrent library used to program threads on both client
+and server sides. The syntax `let%lwt a = e1 in e2` allows waiting
+(without blocking the rest of the program) for an Lwt thread to
+terminate before continuing. `e2` must ben a Lwt thread
+itself. `Lwt.return` enables creating an already-terminated Lwt thread.
+`Lwt_js_events` defines a convenient way to program interface events
+(mouse, keyboard, ...).
+
+`Lwt_js_events.onload` is a Lwt thread that waits until the page is
+loaded. There are similar functions to wait for other events, e.g.,
+for a click on an element of the page, or for a key press.
+
+
 **Editor's note**: quite some work to install, compile and deploy.
 
 ## Python
