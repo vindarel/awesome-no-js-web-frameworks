@@ -1,5 +1,5 @@
 
-# Awesome web frameworks solving the Javascript problem
+# (Possibly awesome) Web frameworks solving the Javascript problem
 
 Because writing a web project with two languages is frustrating,
 specially with Javascript.
@@ -10,7 +10,7 @@ interactive web app without resorting to Javascript. Bonus point to
 the ones not using JS libraries and not separating back and front
 code.
 
-Inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://wiki.haskell.org/The_JavaScript_Problem).
+Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://wiki.haskell.org/The_JavaScript_Problem).
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
