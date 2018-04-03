@@ -67,7 +67,13 @@ all the way. Very lightweight.
 
 ## Haskell
 
-https://wiki.haskell.org/The_JavaScript_Problem
+[https://wiki.haskell.org/The_JavaScript_Problem](https://wiki.haskell.org/The_JavaScript_Problem)
+
+### Haste
+
+- https://haste-lang.org/docs/
+- examples: https://github.com/valderman/haste-compiler/blob/master/examples/
+
 
 ## Nim
 
