@@ -82,6 +82,7 @@ all the way. Very lightweight.
 >  Single page applications for Nim.
 
 - https://github.com/pragmagic/karax
+- production example: https://forum.nim-lang.org/. [github](https://github.com/nim-lang/nimforum).
 
 ## Ocaml
 
