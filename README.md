@@ -15,11 +15,14 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
-- [Awesome web frameworks solving the Javascript problem](#awesome-web-frameworks-solving-the-javascript-problem)
+- [(Possibly awesome) Web frameworks solving the Javascript problem](#possibly-awesome-web-frameworks-solving-the-javascript-problem)
     - [Clojure & ClojureScript](#clojure--clojurescript)
     - [Common Lisp](#common-lisp)
         - [Weblocks](#weblocks)
+    - [Elixir](#elixir)
+        - [Drab](#drab)
     - [Haskell](#haskell)
+        - [Haste](#haste)
     - [Nim](#nim)
         - [Karax](#karax)
     - [Ocaml](#ocaml)
@@ -64,6 +67,50 @@ Similar to React but server based.
 
 **Editor's note**: allows to keep the same CL development experience
 all the way. Very lightweight.
+
+## Elixir
+
+### Drab
+
+- website and examples: https://tg.pl/drab
+- https://github.com/grych/drab
+- another library with similar goals is about to be published ([LiveView](https://shift.infinite.red/phoenixs-liveview-client-side-elixir-at-last-2280716ae791), as of september 2018).
+
+> Drab is the extension library to Phoenix Framework for providing an access to the browser's User Interface (DOM objects) from the server side. The main advantage is to eliminate necessity of writing two applications: one for the client-side, and one for the backend. All the UI control may be now done in the backend, eliminating JS and AJAX.
+
+Example: simple html on the client side:
+
+```html
+<form>
+  <input name="text_to_uppercase" value="<%= @text %>">
+  <button drab="click:uppercase">Upcase</button>
+  <button drab="click:downcase">Downcase</button>
+</form>
+```
+
+Drab does not GET or POST the form, it calls the event handler
+function via websockets instead, and updates the DOM nodes directly on
+the page. Clicking the button does not reload the page.
+
+ In this example, the `click` event in the browser remotely runs
+ `DrabPoc.LiveCommander.uppercase/2` on the server:
+
+~~~elixir
+defmodule DrabPoc.LiveCommander do
+  use Drab.Commander
+
+  defhandler uppercase(socket, sender) do
+    text = sender.params["text_to_uppercase"]
+    poke socket, text: String.upcase(text)
+  end
+end
+~~~
+
+After processing the inputs, we need to present it to back in the
+browser. This is where we use `poke/2` function - it pushes the assign
+(in this case: `<%= @text %>`) back to the browser. Input value is
+updated, without reloading the page.
+
 
 ## Haskell
 
