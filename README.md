@@ -55,8 +55,7 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
 
 ### Weblocks
 
-- being updated at [https://github.com/40ants/weblocks/blob/reblocks/docs/source/quickstart.rst](https://github.com/40ants/weblocks/blob/reblocks/docs/source/quickstart.rst)
-- allows continuations based web programming
+- tutorial: http://40ants.com/weblocks/quickstart.html ([sources](https://github.com/40ants/weblocks/blob/reblocks/docs/source/quickstart.rst))
 - can fallback to full html
 - community links: [CL Cookbook](https://lispcookbook.github.io/cl-cookbook/), [Awesome CL](https://github.com/CodyReichert/awesome-cl), [lisp-lang.org](http://lisp-lang.org/)
 
