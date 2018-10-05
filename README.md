@@ -21,6 +21,7 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
         - [Weblocks](#weblocks)
     - [Elixir](#elixir)
         - [Drab](#drab)
+    - [Go](#go)
     - [Haskell](#haskell)
         - [Haste](#haste)
     - [Nim](#nim)
@@ -111,6 +112,13 @@ browser. This is where we use `poke/2` function - it pushes the assign
 (in this case: `<%= @text %>`) back to the browser. Input value is
 updated, without reloading the page.
 
+
+## Go
+
+- https://go.isomorphicgo.org/ (no docs, they are in a book)
+- example: http://igweb.kamesh.com/
+
+Uses the [GopherJS](https://github.com/gopherjs/gopherjs) transpiler.
 
 ## Haskell
 
