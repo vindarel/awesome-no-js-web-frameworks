@@ -57,16 +57,20 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
 
 - tutorial: http://40ants.com/weblocks/quickstart.html ([sources](https://github.com/40ants/weblocks/blob/reblocks/docs/source/quickstart.rst))
 - can fallback to full html
-- community links: [CL Cookbook](https://lispcookbook.github.io/cl-cookbook/), [Awesome CL](https://github.com/CodyReichert/awesome-cl), [lisp-lang.org](http://lisp-lang.org/)
+- production example: https://ultralisp.org/
+- other examples: [cl-torrents-web](https://github.com/vindarel/cl-torrents-web/)
 
 > With Weblocks, you can handle all the business logic server-side,
 > because an action can be any lisp function, even an anonymous
 > lambda, closuring all necessary variables.
 
-Similar to React but server based.
+Components-based like React, but server based.
 
-**Editor's note**: allows to keep the same CL development experience
-all the way. Very lightweight.
+**Editor's note**: it allows to keep the same CL development
+experience all the way. Very lightweight. We can keep the state of the
+application between changes.
+
+- community links: [CL Cookbook](https://lispcookbook.github.io/cl-cookbook/), [Awesome CL](https://github.com/CodyReichert/awesome-cl), [lisp-lang.org](http://lisp-lang.org/)
 
 ## Elixir
 
