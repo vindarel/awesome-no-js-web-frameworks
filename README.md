@@ -21,6 +21,7 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
         - [Weblocks](#weblocks)
     - [Elixir](#elixir)
         - [Drab](#drab)
+        - [Phoenix LiveView](#phoenix-liveview)
     - [Go](#go)
     - [Haskell](#haskell)
         - [Haste](#haste)
@@ -115,6 +116,11 @@ browser. This is where we use `poke/2` function - it pushes the assign
 (in this case: `<%= @text %>`) back to the browser. Input value is
 updated, without reloading the page.
 
+### Phoenix LiveView
+
+- https://dockyard.com/blog/2018/12/12/phoenix-liveview-interactive-real-time-apps-no-need-to-write-javascript
+
+> Phoenix LiveView is an exciting new library which enables rich, real-time user experiences with server-rendered HTML. LiveView powered applications are stateful on the server with bidrectional communication via WebSockets, offering a vastly simplified programming model compared to JavaScript alternatives.
 
 ## Go
 
