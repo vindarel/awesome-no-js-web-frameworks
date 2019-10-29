@@ -12,7 +12,7 @@ code.
 
 Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://wiki.haskell.org/The_JavaScript_Problem).
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [(Possibly awesome) Web frameworks solving the Javascript problem](#possibly-awesome-web-frameworks-solving-the-javascript-problem)
@@ -25,6 +25,7 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
     - [Go](#go)
     - [Haskell](#haskell)
         - [Haste](#haste)
+    - [Haxe](#haxe)
     - [Nim](#nim)
         - [Karax](#karax)
     - [Ocaml](#ocaml)
@@ -138,6 +139,47 @@ Uses the [GopherJS](https://github.com/gopherjs/gopherjs) transpiler.
 - https://haste-lang.org/docs/
 - examples: https://github.com/valderman/haste-compiler/blob/master/examples/
 
+## Haxe
+
+- https://haxe.org
+
+> Haxe is an open source high-level strictly-typed programming language with a fast optimizing cross-compiler. Haxe can build cross-platform applications targeting JavaScript, C++, C#, Java, JVM, Python, Lua, PHP, Flash and allows access to each platform native capabilities. Haxe has its own VMs (HashLink and NekoVM) but can also run in interpreted mode.
+
+Web frameworks:
+
+- https://github.com/ufront/ufront
+- http://hexmachina.org
+- real-world examples: ?
+
+Example: [ufront hello world](https://github.com/ufront/hello/blob/master/HelloWorld.hx).
+
+```
+class HelloWorld {
+	static function main() {
+		#if server
+			// Initialise the app on the server and execute the request.
+			var ufApp = new UfrontApplication({
+				indexController: HelloWorldController,
+				defaultLayout: "layout.html"
+			});
+			#if (php || neko)
+				ufApp.executeRequest();
+			#elseif nodejs
+				ufApp.listen();
+			#end
+		#elseif client
+			// Initialise the app on the client and respond to "pushstate" requests as a single-page-app.
+			var clientApp = new ClientJsApplication({
+				indexController: HelloWorldController,
+				defaultLayout: "layout.html"
+			});
+			clientApp.listen();
+		#end
+	}
+}
+```
+
+Example: [HexMachina Flickr gallery](https://github.com/DoclerLabs/hexMachina-Gallery-Classical-MVC/).
 
 ## Nim
 
