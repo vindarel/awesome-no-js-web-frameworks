@@ -58,9 +58,10 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
 ### Weblocks
 
 - tutorial: http://40ants.com/weblocks/quickstart.html ([sources](https://github.com/40ants/weblocks/blob/reblocks/docs/source/quickstart.rst))
-- can fallback to full html
+- can fallback to full http without ajax
 - production example: https://ultralisp.org/
 - other examples: [cl-torrents-web](https://github.com/vindarel/cl-torrents-web/)
+- [Gitter chat](https://gitter.im/40ants/weblocks)
 
 > With Weblocks, you can handle all the business logic server-side,
 > because an action can be any lisp function, even an anonymous
