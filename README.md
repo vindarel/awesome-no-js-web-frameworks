@@ -336,6 +336,18 @@ status of December, 2020: v1.0 is on its way.
 
 > A Ruby web framework where your Ruby runs on both server and client
 
+## Rust
+
+Various isomorphic Rust frameworks are in development.
+
+### Seed
+
+Seed compiles to WASM and follows the Elm architecture.
+
+- https://seed-rs.org/
+- https://github.com/seed-rs/seed
+- example application: https://github.com/seed-rs/seed-rs-realworld
+
 
 ## Smalltalk
 
