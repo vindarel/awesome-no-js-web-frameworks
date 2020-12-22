@@ -124,6 +124,8 @@ updated, without reloading the page.
 
 > Phoenix LiveView is an exciting new library which enables rich, real-time user experiences with server-rendered HTML. LiveView powered applications are stateful on the server with bidrectional communication via WebSockets, offering a vastly simplified programming model compared to JavaScript alternatives.
 
+- uses nodejs.
+
 ## Go
 
 - https://go.isomorphicgo.org/ (no docs, they are in a book)
