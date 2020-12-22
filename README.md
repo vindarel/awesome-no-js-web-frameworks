@@ -308,6 +308,19 @@ def render_Board_item(self, h, comp, *args):
 
 ## Ruby
 
+### Hyperstack
+
+! heavily uses the JS ecosystem.
+
+status of December, 2020: v1.0 is on its way.
+
+- https://hyperstack.org/
+- "Hyperstack is a Ruby DSL, compiled by Opal, bundled by Webpack, powered by React."
+- https://github.com/hyperstack-org/hyperstack
+- production example: [catprint](https://www.catprint.com/) is built by Hyperstack's lead developer.
+- [presentation video](https://www.youtube.com/watch?v=GEe7hHIhyUs), [comparison with React](https://medium.com/@mitch_23203/the-exact-same-app-in-hyperstack-7f281cef46ca) article.
+- [feature matrix](https://github.com/hyperstack-org/hyperstack/blob/edge/docs/feature_matrix.md)
+
 ### Inesita
 
 - https://github.com/inesita-rb/inesita
