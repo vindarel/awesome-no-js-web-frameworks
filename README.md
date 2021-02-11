@@ -278,6 +278,18 @@ for a click on an element of the page, or for a key press.
 
 **Editor's note**: quite some work to install, compile and deploy.
 
+## PHP
+
+### Livewire
+
+- https://github.com/livewire/livewire
+
+> A full-stack framework for Laravel that takes the pain out of building dynamic UIs.
+
+- documentation: https://laravel-livewire.com/docs/2.x/quickstart
+
+- 9k+ stars
+
 ## Python
 
 ### Anpylar
