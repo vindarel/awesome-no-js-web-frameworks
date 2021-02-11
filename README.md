@@ -55,6 +55,19 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
 
 ## Common Lisp
 
+### CLOG
+
+[CLOG](https://github.com/rabbibotton/clog) - The Common Lisp Omnificent GUI. Uses web technology to produce graphical user interfaces for applications locally or remotely.
+
+- CLOG is based on the ideas of GNOGA, a framework the author wrote for Ada and used in commercial production code since 2013.
+- many tutorials
+
+### ISSR
+
+[Interactive SSR](https://github.com/interactive-ssr/client/blob/master/main.org/) - ISSR allows you to make interactive web pages without writing client scripting. No knowledge about Javascript or DOM is necessary.
+  - it is not unlike Phoenix LiveView or Hotwire.
+- tutorial: http://cjackson.tk/todo-tutorial
+
 ### Weblocks
 
 - tutorial: http://40ants.com/weblocks/quickstart.html ([sources](https://github.com/40ants/weblocks/blob/reblocks/docs/source/quickstart.rst))
