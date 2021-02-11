@@ -380,3 +380,9 @@ good experience with all of them, so we'll appreciate your light.
 On this readme, we'd have quick links and highlights. We can have
 discussions in issues and more in-depth resources and explanations in
 a new file.
+
+# See also
+
+- https://github.com/dbohdan/liveviews - another list
+
+> a list of libraries for creating web applications that handle user interaction with the DOM on the server. These libraries take a different approach from older server-driven browser UIs that simulated a desktop GUI toolkit. They do not lock the developer into working with predefined components; they operate at the level of HTML (DOM) rather than GUI widgets.
