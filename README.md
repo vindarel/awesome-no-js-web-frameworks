@@ -333,6 +333,50 @@ def render_Board_item(self, h, comp, *args):
             # etc
 ```
 
+### Reactor
+
+>  Phoenix LiveView but for Django
+
+- https://github.com/edelvalle/reactor
+- with django-channels
+
+In `x-counter.html`:
+
+```html
+{% load reactor %}
+<div {% tag_header %}>
+  {{ amount }}
+  <button @click="inc">+</button>
+  <button @click="dec">-</button>
+  <button @click="set_to {amount: 0}">reset</button>
+</div>
+```
+
+When the increment button receives a click event send(this, 'inc') is called, send is a reactor function that will look for the parent custom component and will dispatch to it the inc message, or the set_to message and its parameters {amount: 0}.
+
+in `live.py`:
+
+```python
+from reactor import Component
+
+
+class XCounter(Component):
+    template_name = 'x-counter.html'
+
+    def __init__(self, amount: int = 0, **kwargs):
+        super().__init__(**kwargs)
+        self.amount = amount
+
+    def inc(self):
+        self.amount += 1
+
+    def dec(self):
+        self.amount -= 1
+
+    def set_to(self, amount: int):
+        self.amount = amount
+```
+
 ## Ruby
 
 ### Hyperstack
