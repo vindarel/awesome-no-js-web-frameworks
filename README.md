@@ -48,6 +48,7 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
         - [Seaside](#seaside)
 - [HTML on the wire](#html-on-the-wire)
     - [HTMX](#htmx)
+    - [Unpoly](#unpoly)
 - [Contributing](#contributing)
 - [See also](#see-also)
 
@@ -472,6 +473,13 @@ from the same backend response. Just return several HTML chunks in
 your response and tell HTMX what part of the front they should update
 (see `hx-swap-oob`, or how to tell HTMX to send an event after the
 first response is processed).
+
+
+## Unpoly
+
+See also: https://unpoly.com/
+
+> Unpoly enables fast and flexible frontends while keeping rendering logic on the server. It has no dependencies and plays nice with existing code.
 
 
 # Contributing
