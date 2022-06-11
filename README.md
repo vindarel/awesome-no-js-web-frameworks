@@ -46,6 +46,8 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
         - [Seed](#seed)
     - [Smalltalk](#smalltalk)
         - [Seaside](#seaside)
+- [HTML on the wire](#html-on-the-wire)
+    - [HTMX](#htmx)
 - [Contributing](#contributing)
 - [See also](#see-also)
 
@@ -433,6 +435,43 @@ Seed compiles to WASM and follows the Elm architecture.
 
 - http://seaside.st/
 - continuations based
+
+
+# HTML on the wire
+
+Libraries that are usable with any backend solution.
+
+## HTMX
+
+[HTMX](https://htmx.org/)
+
+> allows you to access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes, so you can build modern user interfaces with the simplicity and power of hypertext.
+
+I add it on this list because we can achieve quite a lot without writing a line of JavaScript.
+
+From the doc:
+
+```html
+<button hx-post="/clicked"
+    hx-trigger="click"
+    hx-target="#parent-div"
+    hx-swap="outerHTML"
+>
+    Click Me!
+</button>
+```
+
+This tells htmx:
+
+"When a user clicks on this button, issue an HTTP POST request to '/clicked' and use the content from the response to replace the element with the id parent-div in the DOM"
+
+So, your backend returns HTML fragments. No JSON API involved.
+
+What is nice, is that we can update more than one part of the page
+from the same backend response. Just return several HTML chunks in
+your response and tell HTMX what part of the front they should update
+(see `hx-swap-oob`, or how to tell HTMX to send an event after the
+first response is processed).
 
 
 # Contributing
