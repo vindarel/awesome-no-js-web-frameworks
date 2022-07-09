@@ -38,6 +38,7 @@ Directly inspired by [https://wiki.haskell.org/The_JavaScript_Problem](https://w
         - [Anpylar](#anpylar)
         - [Nagare](#nagare)
         - [Reactor](#reactor)
+        - [IDOM, Justpy…](#idom-justpy)
     - [Ruby](#ruby)
         - [Hyperstack](#hyperstack)
         - [Inesita](#inesita)
@@ -386,6 +387,20 @@ class XCounter(Component):
     def set_to(self, amount: int):
         self.amount = amount
 ```
+
+### IDOM, Justpy…
+
+- [IDOM](https://idom-docs.herokuapp.com/docs/index.html). Server-side bindings for React.
+
+> Ecosystem independence is also a core feature of IDOM. It can be added to existing applications built on a variety of sync and async web servers, as well as integrated with other frameworks like Django, Jupyter, and Plotly Dash.
+
+- [Justpy](https://justpy.io/)
+
+> JustPy is an object-oriented, component based, high-level Python Web Framework that requires no front-end programming. With a few lines of only Python code, you can create interactive websites without any JavaScript programming.
+
+> JustPy has no front-end/back-end distinction.
+
+> JustPy's frontend (which is transparent to JustPy developers) is built using Vue.js
 
 ## Ruby
 
